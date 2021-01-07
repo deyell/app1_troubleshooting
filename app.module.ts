@@ -1,10 +1,10 @@
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';   //error on this line (1)
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';                         
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire';                 //error on this line (7)
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
@@ -22,10 +22,10 @@ var firebaseConfig = {
     AppComponent
   ],
   imports: [
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig),            //added line 25. no issue here
     BrowserModule,
     AppRoutingModule,
-    AngularFirestoreModule,
+    AngularFirestoreModule,                                     //added line 28. no issue here
   ],
   
   providers: [],
