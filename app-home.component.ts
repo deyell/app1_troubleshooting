@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor (private firestore: AngularFirestore) {
+    //no issue with the constructor
+  }
+  myArray: any[] = [];    //added this to see if my code was merging to fire base
 
   ngOnInit(): void {
   }
